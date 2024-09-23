@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoquecambia %}
+
+   <p>Estos son los productos de la marca {{marca}}</p>
+
+   
+   {% if productos %}
+    
+        <ul>
+            {% for producto in productos %}
+
+                <li>{{producto.marca}} - {{producto.producto}}</li>
+
+            {% endfor %}
+        </ul>   
+    {% else %} 
+        <p>No se encontraron productos de esa marca</p>
+    {% endif %}
+        
+{% endblock contenidoquecambia %}
