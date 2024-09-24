@@ -1,12 +1,9 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <div class="home-button"> 
-                    <a class="navbar-brand" href="#!">Inicio</a> 
-                </div>
+                <a class="navbar-brand" href="#!">Inicio</a>
+                <a class="navbar-brand" href="{% url 'Registro' %}">Registro</a> 
                 <a class="navbar-brand" href="{% url 'Catalogo' %}">Catalogo</a>
-                <a class="navbar-brand" href="{% url 'Registro' %}">Registro</a>
-                <a class="navbar-brand" href="{% url 'Entrega' %}">Pedir</a>
-                <a class="btn btn-primary" href="#signup">Iniciar Sesion</a>
+                <a class="navbar-brand" href="{% url 'Entrega' %}">Buscar</a>
             </div>
         </nav>

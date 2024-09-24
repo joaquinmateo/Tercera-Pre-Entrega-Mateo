@@ -20,5 +20,5 @@ from app_tercera_preentrega_mateo.views import inicio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app_tercera_preentrega_mateo', include('app_tercera_preentrega_mateo.urls')),
+    path('app_tercera_preentrega_mateo/', include('app_tercera_preentrega_mateo.urls')),
 ]

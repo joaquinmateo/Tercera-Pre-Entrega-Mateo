@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import *
+from .forms import formulario
 
 def inicio(req):
 
@@ -34,7 +35,28 @@ def buscar_producto(req):
     return render(req, "resultado_busqueda.html", { "productos": productos, "marca": nom_marca}) #Creamos el template
     
 
+def registro(req):
 
+    if req.method == 'POST':
+
+        mi_formulario = formulario(req.POST) 
+
+        if mi_formulario.is_valid(): 
+
+            data = mi_formulario.cleaned_data    
+
+            nuevo_cliente = Cliente(nombre=req.POST["nombre"], apellido=req.POST["apellido"], email=req.POST["email"])
+            nuevo_cliente.save()
+
+            return render(req, "inicio.html", {})
+        else:   
+            return render(req, "registro.html", { "mi_formulario": mi_formulario})
+    
+    else:
+
+        mi_formulario = formulario()
+
+        return render(req, "registro.html", { "mi_formulario": mi_formulario}) 
 
 
 # Create your views here.
