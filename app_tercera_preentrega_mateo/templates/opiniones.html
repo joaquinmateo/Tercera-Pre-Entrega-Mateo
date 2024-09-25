@@ -1,0 +1,14 @@
+{% extends 'padre.html' %}
+
+
+{% block contenidoquecambia %}
+
+    <form action ="{% url 'Opiniones' %}" method="post">{% csrf_token %}
+        
+        {{mi_critica.as_table}}
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+{% endblock contenidoquecambia %}

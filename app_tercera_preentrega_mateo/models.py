@@ -18,11 +18,9 @@ class Cliente(models.Model):
         verbose_name_plural = 'My Clients...'
         ordering = ('nombre', 'apellido')
     
-class Entrega(models.Model):
-    direccion = models.CharField(max_length=50)
-    fecha_entrega = models.DateField()
-    entregado = models.BooleanField()
+class Opiniones(models.Model):
+    opinion = models.CharField(max_length=250)
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     def __str__(self):
-        return f'{self.nombre}'
+        return f'{self.cliente} - {self.opinion}'
 # Create your models here.

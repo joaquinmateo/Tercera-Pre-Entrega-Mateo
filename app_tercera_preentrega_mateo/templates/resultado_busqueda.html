@@ -11,12 +11,12 @@
         <ul>
             {% for producto in productos %}
 
-                <li>{{producto.marca}} - {{producto.producto}}</li>
+                <li>{{producto.marca}} - {{producto.producto}} - ${{producto.precio}}</li>
 
             {% endfor %}
         </ul>   
     {% else %} 
-        <p>No se encontraron productos de esa marca</p>
+        <p>No se encontraron productos de la marca {{marca}}</p>
     {% endif %}
         
 {% endblock contenidoquecambia %}
