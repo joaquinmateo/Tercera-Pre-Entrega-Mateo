@@ -1,11 +1,11 @@
-{% extends 'padre.html' %}
+{% extends 'inicio.html' %}
 
 
 {% block contenidoquecambia %}
 
     <form action ="{% url 'BuscarProducto' %}" method="get"> 
 
-        <p>Ingrese una marca para ver sus productos: <input type="text" name="marca"></p> 
+        <p>Ingrese una marca para ver sus productos: <br> <input type="text" name="marca"></p> 
 
         <button type="submit">Buscar</button>
 

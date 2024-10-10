@@ -1,11 +1,11 @@
-{% extends 'padre.html' %}
+{% extends 'inicio.html' %}
 
 
 {% block contenidoquecambia %}
 
-    <form action ="{% url 'Opiniones' %}" method="post">{% csrf_token %}
+    <form action ="{% url 'CreaOpinion' %}" method="post">{% csrf_token %}
         
-        {{mi_critica.as_table}}
+        {{mi_formulario.as_p}}
 
         <button type="submit">Enviar</button>
 

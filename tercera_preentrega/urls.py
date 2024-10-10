@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from app_tercera_preentrega_mateo.views import inicio
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('app_tercera_preentrega_mateo/', include('app_tercera_preentrega_mateo.urls')),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,14 @@
+{% extends 'inicio.html' %}
+
+
+{% block contenidoquecambia %}
+
+    <h1>Vista en detalle del Producto</h1>
+
+    <h3>Marca: {{catalogo.marca}} <br> Producto: {{catalogo.producto}} <br> Precio: ${{catalogo.precio}} 
+        <br>
+        {% if producto.imagen %}
+            <img src="{{ catalogo.imagen.url }}" class="card-img-top">
+        {% endif %}
+    </h3>
+{% endblock contenidoquecambia %}

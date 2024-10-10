@@ -18,7 +18,12 @@
         <link href="{% static 'css/mis_estilos.css' %}" rel="stylesheet" />
     </head>
     <body>
-        {% include 'navbar.html' %}
+        <nav class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'Login' %}">Iniciar Sesión</a>  
+                <a class="navbar-brand" href="{% url 'Registro' %}">Registrarse</a>
+            </div>
+        </nav>
         <!-- Masthead-->
         <header class="masthead">
             <div class="container position-relative">
@@ -55,9 +60,9 @@
             </div>
         </header>
 
-        {% block contenidoquecambia %}
+        {% block contenidoquecambia1 %}
             
-        {% endblock contenidoquecambia %}
+        {% endblock contenidoquecambia1 %}
 
         <!-- Footer-->
         <footer class="footer bg-light">
